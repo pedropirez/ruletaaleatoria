@@ -1,0 +1,125 @@
+.sWheel-center {
+    position: relative
+}
+
+.d-none {
+    display: none!important
+}
+
+.button.button-primary {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: 0 0;
+    color: #000;
+    font-size: 67px;
+    font-weight: 700;
+    transform: none
+}
+
+.wheel-horizontal-spin-button svg path {
+    fill: var(--global-palette6)
+}
+
+.wheel-horizontal-spin-button svg {
+    transform: scale(1.2);
+    animation: scale-loop 1.5s infinite
+}
+
+@keyframes scale-loop {
+    50% {
+        transform: scale(1)
+    }
+}
+
+.wheel_wrapper_main {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap
+}
+
+.wheel_wrapper_main .tries {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px
+}
+
+.wheel_wrapper_main .tries span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--global-palette1);
+    flex: 1;
+    padding: 10px 0 30px;
+    font-size: 20px;
+    font-weight: 700;
+    position: relative
+}
+
+.wheel_wrapper_main .tries span:after {
+    position: absolute;
+    bottom: 10px;
+    font-size: 20px;
+    font-weight: 400
+}
+
+.wheel_wrapper_main .tries span.yes:after {
+    content: 'YES'
+}
+
+.wheel_wrapper_main .tries span.no:after {
+    content: 'NO'
+}
+
+.wheel_wrapper_main .tries span.maybe:after {
+    content: 'MAY BE'
+}
+
+.wheel_wrapper_main .buttons {
+    display: flex;
+    margin-bottom: 20px
+}
+
+.wheel_wrapper_main .no_of_items {
+    margin-bottom: 20px
+}
+
+.wheel_wrapper_main .no_of_items .items,.wheel_wrapper_main .custom_text .items {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap
+}
+
+.wheel_wrapper_main .no_of_items .items button {
+    padding: 20px
+}
+
+.wheel_wrapper_main .no_of_items .items button,.wheel_wrapper_main .custom_text .items input {
+    flex: 1
+}
+
+.wheel_wrapper_main .no_of_items h2,.wheel_wrapper_main .custom_text h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px
+}
+
+@media(max-width: 568px) {
+    .wheel-horizontal-spin-button svg {
+        transform:scale(.9);
+        animation: scale-loop 1.5s infinite
+    }
+
+    @keyframes scale-loop {
+        50% {
+            transform: scale(.8)
+        }
+    }
+}
